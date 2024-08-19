@@ -1,0 +1,57 @@
+import{_ as s,o as a,c as i,R as n}from"./chunks/framework.jG2La8vi.js";const y=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/网络相关/parse_ipv4.md","filePath":"docs/网络相关/parse_ipv4.md"}'),p={name:"docs/网络相关/parse_ipv4.md"},l=n(`<p>以下为wireshark抓取的数据包，得到如下的十六进制数据：</p><div class="language-javascript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 原始十六进制数据</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> rawHexData</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> \`</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0000   00 50 56 82 26 78 f0 18 98 3d 48 d2 08 00 45 00</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0010   03 4b 00 00 40 00 40 06 4a 34 c0 a8 64 21 c0 a8</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0020   08 07 e5 7f 1f 40 fa b5 74 17 af 18 e1 0d 80 18</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0030   08 0a 52 14 00 00 01 01 08 0a 1d 59 92 4f 45 49</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0040   e0 89 47 45 54 20 2f 73 65 63 6c 69 6e 65 5f 70</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0050   63 5f 63 6c 69 65 6e 74 2f 73 63 65 6e 65 2e 68</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0060   74 6d 6c 3f 73 63 65 6e 65 5f 6b 65 79 3d 69 6e</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0070   64 65 78 5f 65 78 74 65 6e 73 69 6f 6e 70 6c 61</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0080   6e 5f 73 63 65 6e 65 20 48 54 54 50 2f 31 2e 31</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0090   0d 0a 48 6f 73 74 3a 20 31 39 32 2e 31 36 38 2e</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">00a0   38 2e 37 3a 38 30 30 30 0d 0a 55 73 65 72 2d 41</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">00b0   67 65 6e 74 3a 20 4d 6f 7a 69 6c 6c 61 2f 35 2e</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">00c0   30 20 28 4d 61 63 69 6e 74 6f 73 68 3b 20 49 6e</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">00d0   74 65 6c 20 4d 61 63 20 4f 53 20 58 20 31 30 5f</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">00e0   31 35 5f 37 29 20 41 70 70 6c 65 57 65 62 4b 69</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">00f0   74 2f 35 33 37 2e 33 36 20 28 4b 48 54 4d 4c 2c</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0100   20 6c 69 6b 65 20 47 65 63 6b 6f 29 20 43 68 72</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0110   6f 6d 65 2f 31 32 37 2e 30 2e 30 2e 30 20 53 61</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0120   66 61 72 69 2f 35 33 37 2e 33 36 0d 0a 41 63 63</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0130   65 70 74 3a 20 74 65 78 74 2f 68 74 6d 6c 2c 61</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0140   70 70 6c 69 63 61 74 69 6f 6e 2f 78 68 74 6d 6c</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0150   2b 78 6d 6c 2c 61 70 70 6c 69 63 61 74 69 6f 6e</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0160   2f 78 6d 6c 3b 71 3d 30 2e 39 2c 69 6d 61 67 65</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0170   2f 61 76 69 66 2c 69 6d 61 67 65 2f 77 65 62 70</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0180   2c 69 6d 61 67 65 2f 61 70 6e 67 2c 2a 2f 2a 3b</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0190   71 3d 30 2e 38 2c 61 70 70 6c 69 63 61 74 69 6f</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">01a0   6e 2f 73 69 67 6e 65 64 2d 65 78 63 68 61 6e 67</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">01b0   65 3b 76 3d 62 33 3b 71 3d 30 2e 37 0d 0a 41 63</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">01c0   63 65 70 74 2d 45 6e 63 6f 64 69 6e 67 3a 20 67</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">01d0   7a 69 70 2c 20 64 65 66 6c 61 74 65 0d 0a 41 63</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">01e0   63 65 70 74 2d 4c 61 6e 67 75 61 67 65 3a 20 7a</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">01f0   68 2d 43 4e 2c 7a 68 3b 71 3d 30 2e 39 0d 0a 43</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0200   61 63 68 65 2d 43 6f 6e 74 72 6f 6c 3a 20 6d 61</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0210   78 2d 61 67 65 3d 30 0d 0a 43 6f 6f 6b 69 65 3a</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0220   20 73 65 73 73 69 6f 6e 5f 69 64 3d 53 53 49 44</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0230   5f 32 3b 20 74 6f 6b 65 6e 3d 65 79 4a 68 62 47</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0240   63 69 4f 69 4a 49 55 7a 49 31 4e 69 49 73 49 6e</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0250   52 35 63 43 49 36 49 6b 70 58 56 43 4a 39 2e 65</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0260   79 4a 7a 62 33 56 79 59 32 56 66 64 48 6c 77 5a</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0270   53 49 36 49 6e 56 7a 5a 58 49 69 4c 43 4a 7a 62</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0280   33 56 79 59 32 56 66 61 57 51 69 4f 69 49 79 49</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0290   69 77 69 5a 58 68 77 49 6a 6f 78 4e 7a 49 79 4e</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">02a0   54 67 32 4d 7a 55 30 4c 43 4a 70 59 58 51 69 4f</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">02b0   6a 45 33 4d 6a 49 30 4f 54 59 7a 4e 54 51 73 49</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">02c0   6e 42 6c 63 6d 31 70 64 46 39 30 59 57 64 7a 49</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">02d0   6a 6f 69 4b 69 4a 39 2e 72 7a 72 6b 71 4f 6d 36</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">02e0   50 71 6e 39 52 76 39 42 78 30 31 67 50 38 46 45</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">02f0   6e 77 6d 4d 6c 79 41 79 6f 4c 39 4a 76 67 52 36</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0300   2d 70 77 0d 0a 49 66 2d 4e 6f 6e 65 2d 4d 61 74</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0310   63 68 3a 20 57 2f 22 38 30 34 2d 68 2b 63 65 6b</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0320   59 66 71 31 63 30 72 64 65 31 62 44 47 62 42 2b</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0330   6c 4e 4e 64 4f 55 22 0d 0a 55 70 67 72 61 64 65</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0340   2d 49 6e 73 65 63 75 72 65 2d 52 65 71 75 65 73</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">0350   74 73 3a 20 31 0d 0a 0d 0a</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">\`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span></code></pre></div><p>在网络数据传输过程中，数据包被封装成不同的层次，每一层都有其特定的功能和头部信息。当数据包在物理介质上传输时，它首先被封装为一个帧，这个帧包含了目的MAC地址、源MAC地址以及类型字段（Type field，通常被称为 EtherType）。</p><p>这些信息位于数据链路层（第二层或2层），具体来说是在以太网帧头中。数据链路层的主要职责是确保数据在相邻两个节点之间可靠地传输。在以太网帧中，目的MAC地址和源MAC地址用于标识发送方和接收方的网络接口卡（NIC），而EtherType字段则用来指示上层协议类型。</p><p>EtherType字段之所以不被划归到网络层，是因为它的作用是告诉接收方设备如何解释紧随其后的数据。例如，如果EtherType值是0x0800，则表示接下来的数据是IPv4报文；如果是0x86DD，则表示接下来的数据是IPv6报文。因此，EtherType帮助数据链路层确定将帧传递给哪个上层协议进行进一步处理。</p><p>简而言之，EtherType字段的作用在于数据链路层内部，用于区分不同的上层协议，并不是网络层的一部分。网络层（第三层或3层）关注的是逻辑地址（如IP地址）、路由选择和逻辑寻址等概念。</p>`,6),e=[l];function h(k,t,F,d,c,r){return a(),i("div",null,e)}const g=s(p,[["render",h]]);export{y as __pageData,g as default};

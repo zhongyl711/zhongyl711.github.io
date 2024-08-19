@@ -1,0 +1,1 @@
+import{_ as a,o as e,c as i,R as o}from"./chunks/framework.jG2La8vi.js";const p=JSON.parse('{"title":"编码","description":"","frontmatter":{},"headers":[],"relativePath":"docs/编码/index.md","filePath":"docs/编码/index.md"}'),r={name:"docs/编码/index.md"},n=o("",36),t=[n];function d(c,h,l,s,b,u){return e(),i("div",null,t)}const U=a(r,[["render",d]]);export{p as __pageData,U as default};
