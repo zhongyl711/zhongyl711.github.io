@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as t,R as p}from"./chunks/framework.vB1haF5z.js";const y=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/协议/网络.md","filePath":"docs/协议/网络.md"}'),r={name:"docs/协议/网络.md"},o=p("",11),s=[o];function _(n,c,P,i,d,T){return a(),t("div",null,s)}const C=e(r,[["render",_]]);export{y as __pageData,C as default};
